@@ -1,6 +1,6 @@
 import { ANSWER_CLICK } from "../constants";
 
-export const addOne = count => ({
+export const answerClick = count => ({
   type: ANSWER_CLICK,
   payload: count
 });

@@ -1,14 +1,24 @@
 import { ANSWER_CLICK } from "../constants";
 
 const initialAsks = {
-  answers: [
-    { text: "1asdasd" },
-    { text: "2asdasd" },
-    { text: "3asdasd" },
-    { text: "4asdasd" }
-  ],
-  cards: [1, 2, 3, 4],
-  answer: 0
+  react: {
+    results: {},
+    isFinished: false,
+    activeQuestion: 0,
+    quiz: [
+      {
+        question: "What color is sky?",
+        rightAnswer: 3,
+        id: 1,
+        answers: [
+          { text: "Red", id: 1 },
+          { text: "Yellow", id: 2 },
+          { text: "Blue", id: 3 },
+          { text: "Green", id: 4 }
+        ]
+      }
+    ]
+  }
 };
 
 export const quizReducer = (state = initialAsks, { type, payload }) => {
