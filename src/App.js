@@ -1,9 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Navbar } from "./containers";
+import { Main, About, Error } from "./pages";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path="/" component={Main} />
+        <Route path="/about" component={About} />
+        <Route path="*" component={Error} />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;
