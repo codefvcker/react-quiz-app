@@ -1,0 +1,106 @@
+{
+  "react": {
+    "results": {},
+    "isFinished": "false",
+    "activeQuestion": "0",
+    "answerState": "null",
+    "questions": [
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      }
+    ]
+  },
+  "angular": {
+    "results": {},
+    "isFinished": "false",
+    "activeQuestion": "0",
+    "answerState": "null",
+    "questions": [
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'What color is sky?'",
+        "rightAnswerId": "3",
+        "id": 1,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      }
+    ]
+  }
+}
