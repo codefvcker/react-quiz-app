@@ -1,24 +1,54 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { ActiveQuiz } from "./ActiveQuiz";
 import { QuizContext } from "./QuizContext";
 import "./Quiz.scss";
 import { connect } from "react-redux";
-import { answerClick } from "../../store/actions/actionQuiz";
+import { answerClick, answerChange } from "../../store/actions/actionQuiz";
+// import { ANSWER_CLICK } from "../../store/constants";
 
-const Quiz = ({ quiz, activeQuestion }) => {
-  const { rightAnswer, question, answers } = quiz[activeQuestion];
+const Quiz = ({
+  quiz,
+  activeQuestion,
+  answerState,
+  answerChange,
+  results,
+  answerClick
+}) => {
+  const { rightAnswer } = quiz[activeQuestion];
+  const currentQuestion = quiz[activeQuestion];
 
-  useEffect(() => {
-    console.log(question);
-  });
+  const [load, setLoad] = useState(false);
+
+  const handleAnswerClick = (id, answerResult) => {
+    setLoad(true);
+    const answerState = true;
+    setTimeout(() => {
+      answerClick({ id, answerResult, answerState });
+      answerChange();
+    }, 1500);
+  };
+
+  // const hand = () => answerChange();
+
+  useEffect(() => setLoad(false), [activeQuestion]);
+
+  console.log("results", results);
+  console.log("astate", answerState);
 
   return (
     <QuizContext.Provider
-      value={{ answerClick, question, rightAnswer, answers }}
+      value={{
+        currentQuestion,
+        activeQuestion,
+        rightAnswer,
+        handleAnswerClick,
+        answerState,
+        load
+      }}
     >
       <div className="quiz">
         <h1>Big quiz page</h1>
-        <ActiveQuiz />
+        <ActiveQuiz length={quiz.length} />
       </div>
     </QuizContext.Provider>
   );
@@ -27,9 +57,11 @@ const Quiz = ({ quiz, activeQuestion }) => {
 export default connect(
   ({ quizReducer }) => {
     return {
+      answerState: quizReducer.react.answerState,
+      results: quizReducer.react.results,
       activeQuestion: quizReducer.react.activeQuestion,
       quiz: quizReducer.react.quiz
     };
   },
-  { answerClick }
+  { answerClick, answerChange }
 )(Quiz);

@@ -1,14 +1,29 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { QuizContext } from "../../../QuizContext";
 import classNames from "classnames";
 import "./AnswerItem.scss";
 
-export const AnswerItem = ({ text, number, id, className }) => {
-  const classes = classNames("answer-item", className);
+export const AnswerItem = ({ text, number, id }) => {
+  const [color, setColor] = useState("");
 
-  const { answerClick, rightAnswer } = useContext(QuizContext);
+  const { rightAnswer, handleAnswerClick, answerState } = useContext(
+    QuizContext
+  );
 
-  const handleClick = id => console.log(id);
+  const classes = classNames("answer-item", color);
+  console.log("ANSWER STATE", answerState);
+
+  const handleClick = id => {
+    let answerResult;
+    if (id === rightAnswer) {
+      answerResult = "success";
+      setColor(answerResult);
+    } else {
+      answerResult = "error";
+      setColor(answerResult);
+    }
+    handleAnswerClick(id, answerResult);
+  };
 
   return (
     <li onClick={() => handleClick(id)} id={id} className={classes}>

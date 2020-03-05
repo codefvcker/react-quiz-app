@@ -1,1 +1,2 @@
 export const ANSWER_CLICK = "ANSWER_CLICK";
+export const ANSWER_CHANGE = "ANSWER_CHANGE";
