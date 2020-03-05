@@ -3,9 +3,7 @@ import { ANSWER_CLICK, ANSWER_CHANGE } from "../constants";
 const initialAsks = {
   react: {
     results: [],
-    isFinished: false,
     activeQuestion: 0,
-    answerState: true,
     quiz: [
       {
         question: "What color is sky?",
@@ -74,18 +72,17 @@ export const quizReducer = (state = initialAsks, { type, payload }) => {
         react: {
           ...state.react,
           activeQuestion: state.react.activeQuestion + 1,
-          answerState: payload.answerState,
           results: [...state.react.results, payload.answerResult]
         }
       };
-    case ANSWER_CHANGE:
-      return {
-        ...state,
-        react: {
-          ...state.react,
-          answerState: false
-        }
-      };
+    // case ANSWER_CHANGE:
+    //   return {
+    //     ...state,
+    //     react: {
+    //       ...state.react,
+    //       answerState: false
+    //     }
+    //   };
     default:
       return state;
   }

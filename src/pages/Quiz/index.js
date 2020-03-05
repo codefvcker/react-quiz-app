@@ -3,37 +3,37 @@ import { ActiveQuiz } from "./ActiveQuiz";
 import { QuizContext } from "./QuizContext";
 import "./Quiz.scss";
 import { connect } from "react-redux";
-import { answerClick, answerChange } from "../../store/actions/actionQuiz";
+import { answerClick } from "../../store/actions/actionQuiz";
 // import { ANSWER_CLICK } from "../../store/constants";
 
-const Quiz = ({
-  quiz,
-  activeQuestion,
-  answerState,
-  answerChange,
-  results,
-  answerClick
-}) => {
+const Quiz = ({ quiz, activeQuestion, answerChange, results, answerClick }) => {
   const { rightAnswer } = quiz[activeQuestion];
   const currentQuestion = quiz[activeQuestion];
+  const [answerState, setAnswerState] = useState(null);
 
-  const [load, setLoad] = useState(false);
+  console.log("ac", activeQuestion);
+  console.log("ql", quiz.length);
 
   const handleAnswerClick = (id, answerResult) => {
-    setLoad(true);
-    const answerState = true;
-    setTimeout(() => {
-      answerClick({ id, answerResult, answerState });
-      answerChange();
-    }, 1500);
+    if (rightAnswer === id) {
+      setAnswerState({ id, style: "success" });
+      setTimeout(() => {
+        if (activeQuestion + 1 === quiz.length) {
+          alert("Finished");
+        } else {
+          answerClick({ id, answerResult });
+          setAnswerState(null);
+        }
+      }, 1500);
+    } else {
+      setAnswerState({ id, style: "error" });
+    }
   };
 
-  // const hand = () => answerChange();
+  // const isQuizFinished = () => activeQuestion + 1 === quiz.length;
 
-  useEffect(() => setLoad(false), [activeQuestion]);
-
-  console.log("results", results);
-  console.log("astate", answerState);
+  // console.log("results", results);
+  // console.log("astate", answerState);
 
   return (
     <QuizContext.Provider
@@ -42,8 +42,7 @@ const Quiz = ({
         activeQuestion,
         rightAnswer,
         handleAnswerClick,
-        answerState,
-        load
+        answerState
       }}
     >
       <div className="quiz">
@@ -57,11 +56,11 @@ const Quiz = ({
 export default connect(
   ({ quizReducer }) => {
     return {
-      answerState: quizReducer.react.answerState,
+      // answerState: quizReducer.react.answerState,
       results: quizReducer.react.results,
       activeQuestion: quizReducer.react.activeQuestion,
       quiz: quizReducer.react.quiz
     };
   },
-  { answerClick, answerChange }
+  { answerClick }
 )(Quiz);
