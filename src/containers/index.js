@@ -1,2 +1,2 @@
 export { Navbar } from "./Navbar";
-export { QuizCard } from "./QuizCard";
+// export { QuizCard } from "./QuizCard";

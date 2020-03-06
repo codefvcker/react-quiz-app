@@ -1,17 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { QuizService } from "../../services/quizService";
+import { loadCourse } from "../../store/actions/actionQuiz";
 import { Image, Icon, Label } from "../../components";
 import "./QuizCard.scss";
+import { connect } from "react-redux";
 
-export const QuizCard = ({ to, src, alt, className, author, course }) => {
+const QuizCard = ({ src, alt, className, author, course, id, loadCourse }) => {
   const cls = ["course-card"];
 
   if (className) {
     cls.push(className);
   }
 
+  const loadData = async id => {
+    await QuizService.getCourse(id)
+      .then(data => loadCourse(data))
+      .catch(e => console.log(e));
+  };
+
+  const to = `/quiz/${id}`;
+
   return (
-    <Link to={to} className={cls.join(" ")}>
+    <Link to={to} onClick={() => loadData(id)} className={cls.join(" ")}>
       <div className="quiz-card__image-wrap">
         <Image className="quiz-card__image" src={src} alt={alt} />
       </div>
@@ -32,3 +43,5 @@ export const QuizCard = ({ to, src, alt, className, author, course }) => {
     </Link>
   );
 };
+
+export default connect(() => {}, { loadCourse })(QuizCard);

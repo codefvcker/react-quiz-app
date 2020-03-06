@@ -1,4 +1,4 @@
-import { ANSWER_CLICK, RESTART_QUIZ } from "../constants";
+import { ANSWER_CLICK, LOAD_COURSE, RESTART_QUIZ } from "../constants";
 
 export const answerClick = ({ id, answerResult }) => {
   console.log("act", id, answerResult);
@@ -10,6 +10,11 @@ export const answerClick = ({ id, answerResult }) => {
     }
   };
 };
+
+export const loadCourse = course => ({
+  type: LOAD_COURSE,
+  payload: course
+});
 
 export const restartQuiz = () => ({
   type: RESTART_QUIZ

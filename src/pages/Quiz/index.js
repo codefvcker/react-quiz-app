@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { ActiveQuiz } from "./ActiveQuiz";
 import { QuizContext } from "./QuizContext";
 import FinishQuiz from "./FinishQuiz";
-import "./Quiz.scss";
 import { connect } from "react-redux";
 import { answerClick } from "../../store/actions/actionQuiz";
+import "./Quiz.scss";
 
 const Quiz = ({ quiz, activeQuestion, results, answerClick }) => {
   const { rightAnswer } = quiz[activeQuestion];
