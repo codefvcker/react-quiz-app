@@ -1,39 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { ActiveQuiz } from "./ActiveQuiz";
 import { QuizContext } from "./QuizContext";
+import FinishQuiz from "./FinishQuiz";
 import "./Quiz.scss";
 import { connect } from "react-redux";
 import { answerClick } from "../../store/actions/actionQuiz";
-// import { ANSWER_CLICK } from "../../store/constants";
 
-const Quiz = ({ quiz, activeQuestion, answerChange, results, answerClick }) => {
+const Quiz = ({ quiz, activeQuestion, results, answerClick }) => {
   const { rightAnswer } = quiz[activeQuestion];
   const currentQuestion = quiz[activeQuestion];
   const [answerState, setAnswerState] = useState(null);
+  const [finished, setFinished] = useState(true);
 
-  console.log("ac", activeQuestion);
-  console.log("ql", quiz.length);
+  useEffect(() => {
+    if (activeQuestion === 0) {
+      setFinished(false);
+      setAnswerState(null);
+    }
+  }, [activeQuestion]);
 
-  const handleAnswerClick = (id, answerResult) => {
+  const handleAnswerClick = id => {
+    let answerResult;
+
     if (rightAnswer === id) {
       setAnswerState({ id, style: "success" });
-      setTimeout(() => {
-        if (activeQuestion + 1 === quiz.length) {
-          alert("Finished");
-        } else {
-          answerClick({ id, answerResult });
-          setAnswerState(null);
-        }
-      }, 1500);
+      answerResult = "success";
     } else {
       setAnswerState({ id, style: "error" });
+      answerResult = "error";
     }
+
+    setTimeout(() => {
+      if (activeQuestion + 1 === quiz.length) {
+        setFinished(true);
+      } else {
+        answerClick({ id, answerResult });
+        setAnswerState(null);
+      }
+    }, 1500);
   };
 
-  // const isQuizFinished = () => activeQuestion + 1 === quiz.length;
-
-  // console.log("results", results);
-  // console.log("astate", answerState);
+  console.log("res", results);
 
   return (
     <QuizContext.Provider
@@ -47,7 +54,7 @@ const Quiz = ({ quiz, activeQuestion, answerChange, results, answerClick }) => {
     >
       <div className="quiz">
         <h1>Big quiz page</h1>
-        <ActiveQuiz length={quiz.length} />
+        {finished ? <FinishQuiz /> : <ActiveQuiz length={quiz.length} />}
       </div>
     </QuizContext.Provider>
   );

@@ -1,4 +1,4 @@
-import { ANSWER_CLICK, ANSWER_CHANGE } from "../constants";
+import { ANSWER_CLICK, RESTART_QUIZ } from "../constants";
 
 const initialAsks = {
   react: {
@@ -75,14 +75,15 @@ export const quizReducer = (state = initialAsks, { type, payload }) => {
           results: [...state.react.results, payload.answerResult]
         }
       };
-    // case ANSWER_CHANGE:
-    //   return {
-    //     ...state,
-    //     react: {
-    //       ...state.react,
-    //       answerState: false
-    //     }
-    //   };
+    case RESTART_QUIZ:
+      return {
+        ...state,
+        react: {
+          ...state.react,
+          results: [],
+          activeQuestion: 0
+        }
+      };
     default:
       return state;
   }

@@ -1,13 +1,12 @@
 @import "../../styles/valiables.scss";
 
 .btn {
-    display: inline-block;
-    background-color: $primary-blue-color;
     color: $primary-white-color;
     font-weight: 600;
     cursor: pointer;
     text-transform: uppercase;
     text-decoration: none;
+    border: 1px solid $primary-white-color;
     &:hover {
         background-color: $secondary-blue-color;
     }

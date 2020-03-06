@@ -1,16 +1,16 @@
-import { ANSWER_CLICK, ANSWER_CHANGE } from "../constants";
+import { ANSWER_CLICK, RESTART_QUIZ } from "../constants";
 
 export const answerClick = ({ id, answerResult }) => {
+  console.log("act", id, answerResult);
   return {
     type: ANSWER_CLICK,
     payload: {
       id,
       answerResult
-      // answerState
     }
   };
 };
 
-// export const answerChange = () => ({
-//   type: ANSWER_CHANGE
-// });
+export const restartQuiz = () => ({
+  type: RESTART_QUIZ
+});
