@@ -1,12 +1,10 @@
 {
   "react": {
     "results": {},
-    "isFinished": "false",
     "activeQuestion": "0",
-    "answerState": "null",
     "questions": [
       {
-        "question": "'What color is sky?'",
+        "question": "'React?'",
         "rightAnswerId": "3",
         "id": 1,
         "answers": [
@@ -53,12 +51,10 @@
   },
   "angular": {
     "results": {},
-    "isFinished": "false",
     "activeQuestion": "0",
-    "answerState": "null",
     "questions": [
       {
-        "question": "'What color is sky?'",
+        "question": "'Angular?'",
         "rightAnswerId": "3",
         "id": 1,
         "answers": [
