@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { Navbar } from "./containers";
-import { Main, About, Error } from "./pages";
+import { Main, About, Error, Preload } from "./pages";
 import Quiz from "./pages/Quiz";
 
 import store from "./store/store";

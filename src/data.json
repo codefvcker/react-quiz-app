@@ -1,11 +1,11 @@
 {
   "react": {
-    "results": {},
-    "activeQuestion": "0",
-    "questions": [
+    "results": [true],
+    "activeQuestion": 0,
+    "quiz": [
       {
         "question": "'React?'",
-        "rightAnswerId": "3",
+        "rightAnswer": 3,
         "id": 1,
         "answers": [
           { "text": "'Green'", "id": 1 },
@@ -15,9 +15,9 @@
         ]
       },
       {
-        "question": "'What color is sky?'",
-        "rightAnswerId": "3",
-        "id": 1,
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 2,
         "answers": [
           { "text": "'Green'", "id": 1 },
           { "text": "'Black'", "id": 2 },
@@ -26,9 +26,9 @@
         ]
       },
       {
-        "question": "'What color is sky?'",
-        "rightAnswerId": "3",
-        "id": 1,
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 3,
         "answers": [
           { "text": "'Green'", "id": 1 },
           { "text": "'Black'", "id": 2 },
@@ -37,9 +37,64 @@
         ]
       },
       {
-        "question": "'What color is sky?'",
-        "rightAnswerId": "3",
-        "id": 1,
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 4,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 5,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 6,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 7,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 8,
+        "answers": [
+          { "text": "'Green'", "id": 1 },
+          { "text": "'Black'", "id": 2 },
+          { "text": "'Red'", "id": 3 },
+          { "text": "'Yellow'", "id": 4 }
+        ]
+      },
+      {
+        "question": "'React?'",
+        "rightAnswer": 3,
+        "id": 9,
         "answers": [
           { "text": "'Green'", "id": 1 },
           { "text": "'Black'", "id": 2 },
@@ -50,12 +105,12 @@
     ]
   },
   "angular": {
-    "results": {},
-    "activeQuestion": "0",
-    "questions": [
+    "results": [true],
+    "activeQuestion": 0,
+    "quiz": [
       {
         "question": "'Angular?'",
-        "rightAnswerId": "3",
+        "rightAnswer": 3,
         "id": 1,
         "answers": [
           { "text": "'Green'", "id": 1 },
@@ -65,8 +120,8 @@
         ]
       },
       {
-        "question": "'What color is sky?'",
-        "rightAnswerId": "3",
+        "question": "'Angular?'",
+        "rightAnswer": 3,
         "id": 1,
         "answers": [
           { "text": "'Green'", "id": 1 },
@@ -76,8 +131,8 @@
         ]
       },
       {
-        "question": "'What color is sky?'",
-        "rightAnswerId": "3",
+        "question": "'Angular?'",
+        "rightAnswer": 3,
         "id": 1,
         "answers": [
           { "text": "'Green'", "id": 1 },
@@ -87,8 +142,8 @@
         ]
       },
       {
-        "question": "'What color is sky?'",
-        "rightAnswerId": "3",
+        "question": "'Angular?'",
+        "rightAnswer": 3,
         "id": 1,
         "answers": [
           { "text": "'Green'", "id": 1 },

@@ -1,77 +1,58 @@
 import React, { useEffect, useState } from "react";
-import { ActiveQuiz } from "./ActiveQuiz";
-import { QuizContext } from "./QuizContext";
-import FinishQuiz from "./FinishQuiz";
-import { connect } from "react-redux";
-import { answerClick } from "../../store/actions/actionQuiz";
+import ActiveQuiz from "./ActiveQuiz";
+import { loadCourseData } from "../../store/actions/actionQuiz";
+import { QuizService } from "../../services/quizService";
 import "./Quiz.scss";
+import { connect } from "react-redux";
 
-const Quiz = ({ quiz, activeQuestion, results, answerClick }) => {
-  const { rightAnswer } = quiz[activeQuestion];
-  const currentQuestion = quiz[activeQuestion];
-  const length = quiz.length;
-  const [answerState, setAnswerState] = useState(null);
-  const [finished, setFinished] = useState(true);
-  const [last, setLast] = useState("");
+const Quiz = ({ loadCourseData, currentQuiz, state }) => {
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    if (activeQuestion === 0) {
-      setFinished(false);
-      setLast("");
-      setAnswerState(null);
-    }
-  }, [activeQuestion]);
+    const getQuizData = async () => {
+      const test = currentQuiz;
+      const response = await fetch(
+        `https://react-todo-hooks-fcdd5.firebaseio.com/${currentQuiz}.json`
+      );
+      const data = await response.json();
+      loadCourseData({ currentQuiz, data });
+    };
+    getQuizData();
+  }, []);
 
-  const handleAnswerClick = id => {
-    let answerResult;
-
-    if (rightAnswer === id) {
-      setAnswerState({ id, style: "success" });
-      answerResult = "success";
-    } else {
-      setAnswerState({ id, style: "error" });
-      answerResult = "error";
-    }
-
-    setTimeout(() => {
-      if (activeQuestion + 1 === length) {
-        setLast(answerResult);
-        setFinished(true);
-      } else {
-        setAnswerState(null);
-        answerClick({ id, answerResult });
-      }
-    }, 1500);
+  const handleCheck = () => {
+    console.log("state", state);
+    return setLoaded(true);
   };
 
+  console.log(state);
+
   return (
-    <QuizContext.Provider
-      value={{
-        currentQuestion,
-        activeQuestion,
-        rightAnswer,
-        handleAnswerClick,
-        answerState,
-        length,
-        last,
-        results
-      }}
-    >
-      <div className="quiz">
-        <h1>Big quiz page</h1>
-        {finished ? <FinishQuiz /> : <ActiveQuiz length={length} />}
-      </div>
-    </QuizContext.Provider>
+    <div className="quiz">
+      {currentQuiz ? (
+        loaded ? (
+          <ActiveQuiz />
+        ) : (
+          <div>
+            <button onClick={handleCheck}>Check</button>
+          </div>
+        )
+      ) : (
+        <div>
+          Loading...
+          <button onClick={handleCheck}>Check</button>
+        </div>
+      )}
+    </div>
   );
 };
 
 export default connect(
   ({ quizReducer }) => {
     return {
-      results: quizReducer.react.results,
-      activeQuestion: quizReducer.react.activeQuestion,
-      quiz: quizReducer.react.quiz
+      state: quizReducer,
+      currentQuiz: quizReducer.currentQuiz
     };
   },
-  { answerClick }
+  { loadCourseData }
 )(Quiz);

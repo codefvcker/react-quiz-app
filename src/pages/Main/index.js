@@ -5,7 +5,8 @@ export const Main = () => {
   return (
     <div>
       <h1>MAIN</h1>
-      <QuizCard id="react" />
+      <QuizCard id="react" course="react" />
+      <QuizCard id="angular" course="angular" />
     </div>
   );
 };
