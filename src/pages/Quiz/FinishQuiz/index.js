@@ -5,7 +5,7 @@ import { QuizContext } from "../QuizContext";
 import "./FinishQuiz.scss";
 import { connect } from "react-redux";
 
-const FinishQuiz = ({ restartQuiz }) => {
+const FinishQuiz = ({ restartQuiz, currentQuiz }) => {
   const { results, last, length } = useContext(QuizContext);
 
   if (results && last) {
@@ -24,10 +24,13 @@ const FinishQuiz = ({ restartQuiz }) => {
     <div className="finish-quiz">
       <h1>Quiz is finished</h1>
       <ul className="finish-quiz__results-board">{renderResults(results)}</ul>
-      <Button onClick={() => restartQuiz()}>Restart</Button>
+      <Button onClick={() => restartQuiz(currentQuiz)}>Restart</Button>
       <Button to="/">Back to main</Button>
     </div>
   );
 };
 
-export default connect(() => ({}), { restartQuiz })(FinishQuiz);
+export default connect(
+  ({ quizReducer }) => ({ currentQuiz: quizReducer.currentQuiz }),
+  { restartQuiz }
+)(FinishQuiz);

@@ -89,8 +89,8 @@ export const quizReducer = (state = initialAsks, { type, payload }) => {
     case RESTART_QUIZ:
       return {
         ...state,
-        react: {
-          ...state.react,
+        [payload]: {
+          ...state[payload],
           results: [],
           activeQuestion: 0
         }

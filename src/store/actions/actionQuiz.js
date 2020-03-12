@@ -22,8 +22,9 @@ export const loadCourse = course => ({
   payload: course
 });
 
-export const restartQuiz = () => ({
-  type: RESTART_QUIZ
+export const restartQuiz = currentQuiz => ({
+  type: RESTART_QUIZ,
+  payload: currentQuiz
 });
 
 export const loadCourseData = ({ currentQuiz, data }) => {
