@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import ActiveQuiz from "./ActiveQuiz";
-import { loadCourseData } from "../../store/actions/actionQuiz";
-import { QuizService } from "../../services/quizService";
-import "./Quiz.scss";
 import { connect } from "react-redux";
+import { loadCourseData } from "../../store/actions/actionQuiz";
+import { Button } from "../../components";
+import "./Quiz.scss";
 
 const Quiz = ({ loadCourseData, currentQuiz, state }) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const getQuizData = async () => {
-      const test = currentQuiz;
       const response = await fetch(
         `https://react-todo-hooks-fcdd5.firebaseio.com/${currentQuiz}.json`
       );
@@ -33,15 +32,12 @@ const Quiz = ({ loadCourseData, currentQuiz, state }) => {
         loaded ? (
           <ActiveQuiz />
         ) : (
-          <div>
-            <button onClick={handleCheck}>Check</button>
+          <div className="quiz__content">
+            <Button onClick={handleCheck}>Start quiz</Button>
           </div>
         )
       ) : (
-        <div>
-          Loading...
-          <button onClick={handleCheck}>Check</button>
-        </div>
+        <div>Loading...</div>
       )}
     </div>
   );

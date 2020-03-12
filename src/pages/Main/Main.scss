@@ -1,0 +1,19 @@
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 91vh;
+    background: linear-gradient(90deg, #457fca 0%, #5691c8 100%);
+    &__content-wrap {
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        height: 100%;
+    }
+    &__card {
+        width: 40%;
+        height: 400px;
+
+    }
+}

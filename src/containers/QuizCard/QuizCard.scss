@@ -6,8 +6,10 @@
   height: 350px;
   border: 1px solid $primary-gray-color;
   box-shadow: $primary-box-shadow;
+  border: 1px solid $primary-white-color;
+  border-radius: 10px;
   text-decoration: none;
-  color: $primary-black-color;
+  color: $primary-white-color;
   &__image-wrap, &__content-wrap, &__content, &__stats-wrap {
     display: flex;
     align-items: center;
@@ -36,5 +38,9 @@
   &__stats-wrap {
     justify-content: space-between;
     padding: 0 10px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $primary-white-color;
   }
 }

@@ -6,7 +6,7 @@ import "./QuizCard.scss";
 import { connect } from "react-redux";
 
 const QuizCard = ({ src, alt, className, author, course, id, loadCourse }) => {
-  const cls = ["course-card"];
+  const cls = ["quiz-card"];
 
   if (className) {
     cls.push(className);
