@@ -28,17 +28,30 @@ const Quiz = ({ loadCourseData, currentQuiz, state }) => {
 
   return (
     <div className="quiz">
-      {currentQuiz ? (
-        loaded ? (
-          <ActiveQuiz />
+      <div className="quiz__content-wrap">
+        {currentQuiz ? (
+          loaded ? (
+            <ActiveQuiz />
+          ) : (
+            <div className="quiz__content">
+              <h1>{currentQuiz.toUpperCase()}</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+                nostrum iusto quasi quos! Sit qui assumenda consequatur corrupti
+                neque amet quia, minus perspiciatis dolor, quam rem quas.
+                Aliquid ad aut beatae illum? Et dolores tempore accusamus. Porro
+                maiores impedit aut pariatur eveniet soluta odit dolore sunt,
+                totam beatae voluptates magnam velit facere tenetur dolorem.
+              </p>
+              <Button className="quiz__btn--start" onClick={handleCheck}>
+                Start quiz
+              </Button>
+            </div>
+          )
         ) : (
-          <div className="quiz__content">
-            <Button onClick={handleCheck}>Start quiz</Button>
-          </div>
-        )
-      ) : (
-        <div>Loading...</div>
-      )}
+          <div className="quiz__loader-wrap">Loading...</div>
+        )}
+      </div>
     </div>
   );
 };

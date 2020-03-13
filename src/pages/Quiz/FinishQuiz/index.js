@@ -24,8 +24,10 @@ const FinishQuiz = ({ restartQuiz, currentQuiz }) => {
     <div className="finish-quiz">
       <h1>Quiz is finished</h1>
       <ul className="finish-quiz__results-board">{renderResults(results)}</ul>
-      <Button onClick={() => restartQuiz(currentQuiz)}>Restart</Button>
-      <Button to="/">Back to main</Button>
+      <div className="finish-quiz__btn-wrap">
+        <Button onClick={() => restartQuiz(currentQuiz)}>Restart</Button>
+        <Button to="/">Back to main</Button>
+      </div>
     </div>
   );
 };

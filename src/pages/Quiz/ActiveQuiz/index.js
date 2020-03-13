@@ -59,21 +59,23 @@ export const ActiveQuiz = ({ quizReducer, answerClick, currentQuiz }) => {
         results
       }}
     >
-      {finished ? (
-        <FinishQuiz />
-      ) : (
-        <div className="active-quiz">
-          <p className="active-quiz__question">
-            <span>
-              <strong>1.{question}</strong>&nbsp;
-            </span>
-            <small>
-              {activeQuestion + 1} from {length}
-            </small>
-          </p>
-          <AnswerList answers={answers} />
-        </div>
-      )}
+      <div className="active-quiz">
+        {finished ? (
+          <FinishQuiz />
+        ) : (
+          <div className="active-quiz__content-wrap">
+            <p className="active-quiz__question">
+              <span>
+                <strong>1.{question}</strong>&nbsp;
+              </span>
+              <small>
+                {activeQuestion + 1} from {length}
+              </small>
+            </p>
+            <AnswerList answers={answers} />
+          </div>
+        )}
+      </div>
     </QuizContext.Provider>
   );
 };

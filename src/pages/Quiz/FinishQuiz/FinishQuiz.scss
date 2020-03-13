@@ -1,10 +1,10 @@
-@import '../../../styles/valiables.scss';
+@import '../../../styles/variables.scss';
 
 .finish-quiz {
-  color: #fff;
+  color: $primary-white-color;
   padding: 20px;
-  border: 2px solid #fff;
-  border-radius: 5px;
+  border: $primary-border;
+  border-radius: $primary-border-radius;
   margin: 0 10px;
   box-sizing: border-box;
   &__results-board {
@@ -14,6 +14,13 @@
     justify-content: space-around;
     align-items: center;
     list-style: none;
+  }
+  &__btn-wrap {
+    width: 100%;
+    display: flex;
+    & * {
+      margin-left: 10px;
+    }
   }
   &__success, &__error {
     height: 60px;
