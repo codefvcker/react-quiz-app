@@ -4,102 +4,102 @@
     "activeQuestion": 0,
     "quiz": [
       {
-        "question": "'React?'",
+        "question": "When React was realised?",
         "rightAnswer": 3,
         "id": 1,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "June 28, 2014", "id": 1 },
+          { "text": "September 2, 2011", "id": 2 },
+          { "text": "May 29, 2013", "id": 3 },
+          { "text": "December 11, 2012", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
-        "rightAnswer": 3,
+        "question": "What is ReactJS?",
+        "rightAnswer": 1,
         "id": 2,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "JS Library", "id": 1 },
+          { "text": "Language of programming", "id": 2 },
+          { "text": "Program", "id": 3 },
+          { "text": "Approach", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
-        "rightAnswer": 3,
+        "question": "What is a stateless component?",
+        "rightAnswer": 4,
         "id": 3,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "Operator", "id": 1 },
+          { "text": "JS framework", "id": 2 },
+          { "text": "Array", "id": 3 },
+          { "text": "Function", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
-        "rightAnswer": 3,
+        "question": "State must be ...?",
+        "rightAnswer": 2,
         "id": 4,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "Green", "id": 1 },
+          { "text": "Immutable", "id": 2 },
+          { "text": "Big", "id": 3 },
+          { "text": "Alive", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
+        "question": "Choose right name of React hook?",
         "rightAnswer": 3,
         "id": 5,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "useProtect", "id": 1 },
+          { "text": "useProps", "id": 2 },
+          { "text": "useEffect", "id": 3 },
+          { "text": "useObject", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
+        "question": "What kind of programming patterns React is?",
         "rightAnswer": 3,
         "id": 6,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "MVC", "id": 1 },
+          { "text": "ACAB", "id": 2 },
+          { "text": "MVVM", "id": 3 },
+          { "text": "ACDC", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
-        "rightAnswer": 3,
+        "question": "Can I use TypeScript in React?",
+        "rightAnswer": 4,
         "id": 7,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "What is it?", "id": 1 },
+          { "text": "I don't know", "id": 2 },
+          { "text": "No", "id": 3 },
+          { "text": "Yes, sure", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
-        "rightAnswer": 3,
+        "question": "React component is a ...?",
+        "rightAnswer": 1,
         "id": 8,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "Building block of application", "id": 1 },
+          { "text": "Operational system", "id": 2 },
+          { "text": "Technology", "id": 3 },
+          { "text": "Array with some instances", "id": 4 }
         ]
       },
       {
-        "question": "'React?'",
-        "rightAnswer": 3,
+        "question": "The copy of real DOM in react is ...?",
+        "rightAnswer": 2,
         "id": 9,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "ComponentDOM", "id": 1 },
+          { "text": "VirtualDOM", "id": 2 },
+          { "text": "ShadowDOM", "id": 3 },
+          { "text": "ServerDOM", "id": 4 }
         ]
       }
     ]

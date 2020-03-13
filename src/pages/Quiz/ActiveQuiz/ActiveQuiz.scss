@@ -10,10 +10,11 @@
     border-radius: $primary-border-radius;
     margin: 0 10px;
     box-sizing: border-box;
-    &__question {
-      display: flex;
-      justify-content: space-between;
-    }
+  }
+  &__question {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
