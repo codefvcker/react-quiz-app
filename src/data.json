@@ -109,47 +109,47 @@
     "activeQuestion": 0,
     "quiz": [
       {
-        "question": "'Angular?'",
-        "rightAnswer": 3,
+        "question": "When Angular2 was realised?",
+        "rightAnswer": 2,
         "id": 1,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "June 8, 2015", "id": 1 },
+          { "text": "September 14, 2016", "id": 2 },
+          { "text": "May 27, 2017", "id": 3 },
+          { "text": "April 3, 2018", "id": 4 }
         ]
       },
       {
-        "question": "'Angular?'",
+        "question": "Angular2 is a ...?",
         "rightAnswer": 3,
         "id": 1,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "Book", "id": 1 },
+          { "text": "Function", "id": 2 },
+          { "text": "JS framework", "id": 3 },
+          { "text": "Site", "id": 4 }
         ]
       },
       {
-        "question": "'Angular?'",
-        "rightAnswer": 3,
+        "question": "What kind of programming patterns Angular2 is?",
+        "rightAnswer": 1,
         "id": 1,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "MVC", "id": 1 },
+          { "text": "ACDC", "id": 2 },
+          { "text": "ACAB", "id": 3 },
+          { "text": "MVVM", "id": 4 }
         ]
       },
       {
-        "question": "'Angular?'",
-        "rightAnswer": 3,
+        "question": "AngularJS is older than Angular2?",
+        "rightAnswer": 4,
         "id": 1,
         "answers": [
-          { "text": "'Green'", "id": 1 },
-          { "text": "'Black'", "id": 2 },
-          { "text": "'Red'", "id": 3 },
-          { "text": "'Yellow'", "id": 4 }
+          { "text": "The same", "id": 1 },
+          { "text": "No", "id": 2 },
+          { "text": "I don't know", "id": 3 },
+          { "text": "Yes", "id": 4 }
         ]
       }
     ]
