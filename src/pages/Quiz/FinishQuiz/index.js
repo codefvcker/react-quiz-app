@@ -17,7 +17,9 @@ const FinishQuiz = ({ restartQuiz, currentQuiz }) => {
 
   const renderResults = results =>
     results.map((item, index) => (
-      <li className={`finish-quiz__${item}`}>{index + 1}</li>
+      <li key={item + index} className={`finish-quiz__${item}`}>
+        {index + 1}
+      </li>
     ));
 
   return (

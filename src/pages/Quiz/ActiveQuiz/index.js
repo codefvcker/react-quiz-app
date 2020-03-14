@@ -43,7 +43,7 @@ export const ActiveQuiz = ({ quizReducer, answerClick, currentQuiz }) => {
         setAnswerState(null);
         answerClick({ id, currentQuiz, answerResult });
       }
-    }, 1500);
+    }, 800);
   };
 
   return (

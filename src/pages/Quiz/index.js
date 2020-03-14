@@ -5,7 +5,7 @@ import { loadCourseData } from "../../store/actions/actionQuiz";
 import { Button } from "../../components";
 import "./Quiz.scss";
 
-const Quiz = ({ loadCourseData, currentQuiz, state }) => {
+const Quiz = ({ loadCourseData, currentQuiz }) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
