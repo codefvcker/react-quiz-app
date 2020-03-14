@@ -1,14 +1,10 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { QuizContext } from "../../../QuizContext";
 import classNames from "classnames";
 import "./AnswerItem.scss";
 
 export const AnswerItem = ({ text, number, id }) => {
-  // const [color, setColor] = useState("");
-
-  const { rightAnswer, handleAnswerClick, answerState } = useContext(
-    QuizContext
-  );
+  const { handleAnswerClick, answerState } = useContext(QuizContext);
 
   const classes = classNames(
     "answer-item",

@@ -5,17 +5,14 @@ import {
   LOAD_COURSE_DATA
 } from "../constants";
 
-export const answerClick = ({ id, currentQuiz, answerResult }) => {
-  console.log("act", id, answerResult);
-  return {
-    type: ANSWER_CLICK,
-    payload: {
-      id,
-      currentQuiz,
-      answerResult
-    }
-  };
-};
+export const answerClick = ({ id, currentQuiz, answerResult }) => ({
+  type: ANSWER_CLICK,
+  payload: {
+    id,
+    currentQuiz,
+    answerResult
+  }
+});
 
 export const loadCourse = course => ({
   type: LOAD_COURSE,
@@ -27,12 +24,10 @@ export const restartQuiz = currentQuiz => ({
   payload: currentQuiz
 });
 
-export const loadCourseData = ({ currentQuiz, data }) => {
-  return {
-    type: LOAD_COURSE_DATA,
-    payload: {
-      currentQuiz,
-      data
-    }
-  };
-};
+export const loadCourseData = ({ currentQuiz, data }) => ({
+  type: LOAD_COURSE_DATA,
+  payload: {
+    currentQuiz,
+    data
+  }
+});

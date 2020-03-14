@@ -1,9 +1,9 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { loadCourse } from "../../store/actions/actionQuiz";
 import { Image, Icon, Label } from "../../components";
 import "./QuizCard.scss";
-import { connect } from "react-redux";
 
 const QuizCard = ({ src, alt, className, author, course, id, loadCourse }) => {
   const cls = ["quiz-card"];

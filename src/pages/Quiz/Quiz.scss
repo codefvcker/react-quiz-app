@@ -9,7 +9,6 @@
   &__content-wrap {
     width: 60%;
     height: 90%;
-    
     display: flex;
     justify-content: center;
   }
@@ -26,5 +25,6 @@
   }
   &__btn--start {
     width: 30%;
+    height: 50px;
   }
 }

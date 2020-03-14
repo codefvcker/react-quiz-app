@@ -12,7 +12,7 @@ export const Button = ({
   disabled,
   active
 }) => {
-  const classes = classNames("btn", { active }, className);
+  const classes = classNames("button", { active }, className);
 
   if (to) {
     return (

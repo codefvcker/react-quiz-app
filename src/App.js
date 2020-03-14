@@ -1,11 +1,10 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Header } from "./containers";
-import { Main, About, Error } from "./pages";
-import Quiz from "./pages/Quiz";
-
-import store from "./store/store";
 import { Provider } from "react-redux";
+import { Main, About, Error } from "./pages";
+import { Header } from "./containers";
+import Quiz from "./pages/Quiz";
+import store from "./store/store";
 
 function App() {
   return (

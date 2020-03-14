@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import FinishQuiz from "../FinishQuiz";
 import { connect } from "react-redux";
+import FinishQuiz from "../FinishQuiz";
 import { answerClick } from "../../../store/actions/actionQuiz";
 import { QuizContext } from "../QuizContext";
 import { AnswerList } from "./AnswerList";

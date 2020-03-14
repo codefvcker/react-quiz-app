@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ActiveQuiz from "./ActiveQuiz";
 import { connect } from "react-redux";
+import ActiveQuiz from "./ActiveQuiz";
 import { loadCourseData } from "../../store/actions/actionQuiz";
 import { Button } from "../../components";
 import "./Quiz.scss";
@@ -20,11 +20,8 @@ const Quiz = ({ loadCourseData, currentQuiz, state }) => {
   }, []);
 
   const handleCheck = () => {
-    console.log("state", state);
     return setLoaded(true);
   };
-
-  console.log(state);
 
   return (
     <div className="quiz">

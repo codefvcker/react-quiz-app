@@ -1,9 +1,9 @@
 @import '../../../../../styles/variables.scss';
 
 .answer-item {
-  border: 1px solid $primary-white-color;
+  border: $primary-border;
   margin: 5px 0;
-  border-radius: 5px;
+  border-radius: $primary-border-radius;
   padding: 5px 10px;
   cursor: pointer;
   box-sizing: border-box;

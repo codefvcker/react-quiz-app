@@ -1,9 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
+import { connect } from "react-redux";
 import { Button } from "../../../components";
 import { restartQuiz } from "../../../store/actions/actionQuiz";
 import { QuizContext } from "../QuizContext";
 import "./FinishQuiz.scss";
-import { connect } from "react-redux";
 
 const FinishQuiz = ({ restartQuiz, currentQuiz }) => {
   const { results, last, length } = useContext(QuizContext);
