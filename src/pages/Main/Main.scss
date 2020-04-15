@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: $primary-white-color;
+    margin-top: 50px;
+    &__content-wrap {
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        width: 60%;
+        height: 100%;
+    }
+    &__card {
+        width: 40%;
+        height: 400px;
+    }
+}

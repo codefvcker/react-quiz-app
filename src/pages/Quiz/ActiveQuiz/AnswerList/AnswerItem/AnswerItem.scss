@@ -1,0 +1,22 @@
+@import '../../../../../styles/variables.scss';
+
+.answer-item {
+  border: $primary-border;
+  margin: 5px 0;
+  border-radius: $primary-border-radius;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:hover {
+    background: rgba($primary-white-color,0.2);
+    transition: background .3s ease-in-out;
+  }
+}
+
+.success {
+  background-color: green !important;
+}
+
+.error {
+  background-color: red !important;
+}

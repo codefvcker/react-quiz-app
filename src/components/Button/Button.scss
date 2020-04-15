@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+
+.button {
+    color: $primary-white-color;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: transparent;
+    border-radius: $primary-border-radius;
+    border: $primary-border;
+    padding: 10px 20px;
+    &:hover {
+        background-color: $secondary-blue-color;
+        text-decoration: none;
+    }
+    &[disabled] {
+        opacity: .2;
+    }
+    &:active {
+        outline: none;
+    }
+}

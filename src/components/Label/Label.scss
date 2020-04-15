@@ -1,0 +1,12 @@
+.label {
+  display: inline-block;
+  &.light {
+      font-weight: 200;
+  }
+  &.semi {
+      font-weight: 400;
+  }
+  &.bold {
+      font-weight: 600;
+  }
+}

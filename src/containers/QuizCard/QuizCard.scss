@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.quiz-card {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  border: $primary-border;
+  box-shadow: $primary-box-shadow;
+  border: 1px solid $primary-white-color;
+  border-radius: 10px;
+  text-decoration: none;
+  color: $primary-white-color;
+  &__image-wrap, &__content-wrap, &__content, &__stats-wrap {
+    display: flex;
+    align-items: center;
+  }  
+  &__image-wrap {
+    width: 100%;
+    height: 100%;
+    flex: 2;
+    justify-content: center;
+  }
+  &__image {
+    width: 70%;
+    height: 70%;
+  }
+  &__content {
+    flex: 0.9;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__content * {
+    margin: 3px 0;
+  }
+  &__stats-wrap {
+    flex: 0.3
+  }
+  &__stats-wrap {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+  &:hover {
+    text-decoration: none;
+    color: $primary-white-color;
+  }
+}
